@@ -1,0 +1,40 @@
+{
+    "mcpServers": {
+        "Analysis": {
+            "command": "python",
+            "args": [
+                "tools/Analysis.py",
+                "--temp_dir",
+                "tmp/tmp/out"
+            ]
+        },
+        "Index": {
+            "command": "python",
+            "args": [
+                "tools/Index.py",
+                "--temp_dir",
+                "tmp/tmp/out"
+            ]
+        },
+        "Statistics": {
+            "command": "python",
+            "args": [
+                "tools/Statistics.py",
+                "--temp_dir",
+                "tmp/tmp/out"
+            ]
+        }
+    },
+    "models": [
+        {
+            "config_name": "llama3.2-local",
+            "model_type": "openai_chat",
+            "model_name": "llama3.2:1b",
+            "api_key": "ollama",
+            "client_args": {
+                "base_url": "http://localhost:11434/v1"
+            },
+            "generate_args": {}
+        }
+    ]
+}
